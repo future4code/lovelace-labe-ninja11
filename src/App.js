@@ -1,36 +1,36 @@
 import React from "react";
-import TelaCarrinho from "./components/TelaCarrinho";
-import TelaHome from "./components/TelaHome";
+import styled from 'styled-components';
+import Nav from './components/Header/Nav'
 
-export default class App extends React.Component {
+const AppContainer = styled.div`
+  width: 100vw;
+  high: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: pink;
+  align-items: center;
+  justify-content: space-around;
+  border: 2px;
+  border-style: solid;
+  
+`
+
+class App extends React.Component {
   state = {
-    telaAtual: "home",
+
   }
 
-  escolheTela = () => {
-    switch (this.state.telaAtual){
-      case "home":
-        return <TelaHome irParaCarrinho={this.irParaCarrinho}/>
-      case "carrinho":
-        return <TelaCarrinho irParaHome={this.irParaHome}/>
-      default:
-        return <div>Erro! Pagina n'ao encontrada D?</div>
-    }
+  render () {
+    return(
+      <AppContainer>
+          <Nav />
+      </AppContainer>
+      
+      
+)
   }
-
-  irParaHome = () => {
-    this.setState({telaAtual:"home"})
-  }
-
-  irParaCarrinho = () => {
-    this.setState({telaAtual: "carrinho"})
-  }
-
-  render() {
-    return ( 
-      <div>
-        {this.escolheTela()}
-      </div>
-    )
-  }
+  
 }
+
+
+export default App;
