@@ -10,7 +10,6 @@ const HeaderContainer = styled.div`
     background: pink;
     align-items: center;
     justify-content: space-around;
-    border: 2px;
     border-style: solid;
 `
 
@@ -20,8 +19,8 @@ const ButtonHeader = styled.button`
     justify-content: space-around;
     background-color: yellow;
     color: black;
-    border: 1.5px solid #black;
-    border-radius: 4px;
+    border: 1px solid #black;
+    border-radius: 6px;
 `
 
 // aqui deve linkar com o carrinho que será feito
@@ -32,8 +31,9 @@ const Header = () => {
         <div>
             <ButtonHeader>Home</ButtonHeader>
             <ButtonHeader>Carrinho</ButtonHeader>
+            
         </div>
-
+        
         </HeaderContainer>
     )
 }
