@@ -9,7 +9,6 @@ export default class TelaCarrinho extends React.Component {
     render () {
         return(
             <div>
-                <button onClick={this.props.irParaHome}>Home</button>
                 <h1>Carrinho</h1>
             </div>
         )
